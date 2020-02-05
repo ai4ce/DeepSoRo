@@ -3,7 +3,7 @@
 Ruoyu Wang, Shiheng Wang, Songyu Du, Erdong Xiao, Wenzhen Yuan, Chen Feng
 
 This repository contains PyTorch implementation associated with the paper:
-"[Real-time Soft Body 3D Proprioception via Deep Vision-based Sensing](https://arxiv.org/pdf/1904.03820.pdf)",
+"[Real-time Soft Body 3D Proprioception via Deep Vision-based Sensing](https://arxiv.org/pdf/1904.03820.pdf)", RA-L/ICRA 2020.
 
 
 ## Abstract
