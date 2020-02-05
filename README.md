@@ -15,10 +15,9 @@ Top row: Predicted 3D shape Bottom row: Ground truth 3D shape
 </p>
 
 ## Code
-TBD
+The code of this project will be released soon.
 
 ## Citation
-# Citation
 If you find DeepSoRo useful in your research, please cite:
 ```BibTex
 @article{wang2019real,
