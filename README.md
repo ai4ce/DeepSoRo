@@ -17,5 +17,14 @@ Top row: Predicted 3D shape Bottom row: Ground truth 3D shape
 ## Code
 TBD
 
-## Publication(s)
-TBD
+## Citation
+# Citation
+If you find DeepSoRo useful in your research, please cite:
+```BibTex
+@article{wang2019real,
+  title={Real-time Soft Robot 3D Proprioception via Deep Vision-based Sensing},
+  author={Wang, Ruoyu and Wang, Shiheng and Xiao, Erdong and Jindal, Kshitij and Yuan, Wenzhen and Feng, Chen},
+  journal={arXiv preprint arXiv:1904.03820},
+  year={2019}
+}
+```
