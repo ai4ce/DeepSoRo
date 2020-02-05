@@ -12,7 +12,7 @@ Top row: Predicted 3D shape Bottom row: Ground truth 3D shape
 <img width="160" src="./docs/images/150_200.gif">
 <img width="160" src="./docs/images/80_130.gif">
 <img width="160" src="./docs/images/3900_3950.gif">
-<\p>
+</p>
 
 ## Code
 TBD
