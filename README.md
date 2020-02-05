@@ -18,6 +18,7 @@ Top row: Predicted 3D shape Bottom row: Ground truth 3D shape
 <img width="160" src="./docs/images/3900_3950.gif">
 </p>
 
+A video demo is provided thourgh "[this link](https://youtu.be/kVirop7rf8o)".
 ## Code
 The code of this project will be released soon.
 
