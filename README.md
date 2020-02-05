@@ -1,4 +1,4 @@
-## Real-time Soft Body 3D Proprioception via Deep Vision-based Sensing
+## DeepSoRo
 
 Ruoyu Wang, Shiheng Wang, Songyu Du, Erdong Xiao, Wenzhen Yuan, Chen Feng
 
