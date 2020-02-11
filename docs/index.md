@@ -30,7 +30,7 @@ If you find DeepSoRo useful in your research, please cite:
 ```BibTex
 @article{wang2019real,
   title={Real-time Soft Robot 3D Proprioception via Deep Vision-based Sensing},
-  author={Wang, Ruoyu and Wang, Shiheng and Xiao, Erdong and Jindal, Kshitij and Yuan, Wenzhen and Feng, Chen},
+  author={Wang, Ruoyu and Wang, Shiheng and Du, Songyu and Xiao, Erdong and Yuan, Wenzhen and Feng, Chen},
   journal={arXiv preprint arXiv:1904.03820},
   year={2019}
 }
@@ -38,5 +38,5 @@ If you find DeepSoRo useful in your research, please cite:
 
 <hr>
 <div id="visitormap">
-<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5tdciidkfgl&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
+<script type="text/javascript" src="//ra.revolvermaps.com/0/0/7.js?i=5pe8vrbbccx&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;br=8&amp;ds=0" async="async"></script>
 </div>
