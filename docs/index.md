@@ -19,6 +19,7 @@ Top row: Predicted 3D shape Bottom row: Ground truth 3D shape
 </p>
 
 A video demo is provided thourgh [this link](https://youtu.be/kVirop7rf8o).
+
 [![DeeoSoRo Video](http://img.youtube.com/vi/kVirop7rf8o/0.jpg)](http://www.youtube.com/watch?v=kVirop7rf8o "DeeoSoRo Video")
 
 ## Code
