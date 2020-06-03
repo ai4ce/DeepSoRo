@@ -23,7 +23,18 @@ A video demo is provided thourgh [this link](https://youtu.be/kVirop7rf8o).
 [![DeeoSoRo Video](http://img.youtube.com/vi/kVirop7rf8o/0.jpg)](http://www.youtube.com/watch?v=kVirop7rf8o "DeeoSoRo Video")
 
 ## Code
-The code of this project will be released soon on [our GitHub repository](https://github.com/ai4ce/DeepSoRo).
+The code of this project is released on [our GitHub repository](https://github.com/ai4ce/DeepSoRo).
+
+## Requirement
+
+We recommand to use conda to install the required packages.
+
+python>=3.6
+pytorch>=1.4
+pytorch3d>=0.2.0
+open3d>=0.10.0
+
+please check https://github.com/facebookresearch/pytorch3d/blob/master/INSTALL.md for pytorch3d installation
 
 ## Citation
 If you find DeepSoRo useful in your research, please cite:
