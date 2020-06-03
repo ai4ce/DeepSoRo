@@ -30,11 +30,14 @@ The code of this project is released on [our GitHub repository](https://github.c
 We recommand to use conda to install the required packages.
 
 python>=3.6
+
 pytorch>=1.4
+
 pytorch3d>=0.2.0
+
 open3d>=0.10.0
 
-please check https://github.com/facebookresearch/pytorch3d/blob/master/INSTALL.md for pytorch3d installation
+Please check https://github.com/facebookresearch/pytorch3d/blob/master/INSTALL.md for pytorch3d installation.
 
 ## Citation
 If you find DeepSoRo useful in your research, please cite:
