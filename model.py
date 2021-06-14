@@ -66,7 +66,7 @@ class DeepSoRoNet(nn.Module):
         super(DeepSoRoNet, self).__init__()
         assert(fold_dims[0]==512)
         resnet = resnet18()
-        self.conv1 = resnet.conv1
+        self.conv1 = nn.Conv2d(15, 64, kernel_size=7, stride=2, padding=3,bias=False)
         self.bn1 = resnet.bn1
         self.relu = resnet.relu
         self.maxpool = resnet.maxpool
