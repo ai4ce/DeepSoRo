@@ -86,7 +86,7 @@ class DeepSoRoNet(nn.Module):
         x = self.layer2(x)
         x = self.layer3(x)
         x = self.layer4(x)
-        x = self.avgpool(x)
+        x = self.avgpool(x).squeeze(-1).squeeze(-1)
         return x
 
     def decode(self, codeword):
@@ -99,13 +99,15 @@ class DeepSoRoNet(nn.Module):
         return p
 
 
-def prototype_half_cylinder(grid_dims=[100, 100]):
+def prototype_half_cylinder(grid_dims=[100, 100], cuda=True):
     theta = -torch.arange(0, grid_dims[0], dtype=torch.float32) / grid_dims[0] * np.pi
     y = (torch.arange(0, grid_dims[1], dtype=torch.float32) 
             / grid_dims[1] - 0.5).expand(grid_dims[0], -1).t().reshape(-1)
     x = 0.25 * torch.cos(theta).repeat(grid_dims[1])
     z = 0.25 * torch.sin(theta).repeat(grid_dims[1])
     prototype = torch.stack((x, y, z), 1)   
+    if cuda:
+        prototype = prototype.cuda()
     return prototype
 
 

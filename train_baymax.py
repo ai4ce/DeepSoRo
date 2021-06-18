@@ -16,8 +16,8 @@ import glog as logger
 
 
 parser = argparse.ArgumentParser(description='train on baymax dataset')
-parser.add_argument('-d', '--datapath', type=str, default='./BaymaxData', help='path to data')
-parser.add_argument('-o', '--outpath', type=str, default='./BaymaxOut', help='path to save model params')
+parser.add_argument('-d', '--datapath', type=str, required=True, help='path to data')
+parser.add_argument('-o', '--outpath', type=str, required=True, help='path to save model params')
 parser.add_argument('-b', '--batch-size', type=int, default=16, help='batch size')
 parser.add_argument('-l', '--learning-rate', type=float, default=1e-4, help='learning rate')
 parser.add_argument('-e', '--epochs', type=int, default=500, help='number of epochs')
@@ -39,10 +39,9 @@ def train(dataset, model, batch_size, lr, epochs):
             opt.zero_grad()
             img, pts = batch['img'].cuda(), batch['pts'].cuda()
             pts_pred = model(img)
-            loss, _ = chamfers_distance(pts_pred, pts)
+            loss, _ = chamfer_distance(pts_pred, pts)
             loss.backward()
             opt.step()
-            iters += 1
             if batch_idx % 10 == 9:
                 logger.info('[%d, %5d] loss: %.6f' %
                     (ep + 1, batch_idx + 1, loss.item()))

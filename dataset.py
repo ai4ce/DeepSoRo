@@ -11,14 +11,16 @@ import glog as logger
 import cv2
 import os
 import torch
+import open3d
+
 
 class BaymaxDataset(Dataset):
     
     def __init__(self, path):
-        paths = np.load(path)
-        self.pcds = paths[:, 0]
-        self.imgs = paths[:, 1]
-        self.poses = paths[:, 2]
+        N = len(os.listdir(os.path.join(path, 'in')))
+        self.pcds = [os.path.join(path, 'ex', '%d_downsample.pcd' % i) for i in range(N)]
+        self.imgs = [os.path.join(path, 'in', '%d.npy' % i) for i in range(N)]
+        self.poses = [os.path.join(path, 'ex', 'pose_%d.npy' % i) for i in range(N)]
 
     def __len__(self):
         return len(self.imgs)

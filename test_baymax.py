@@ -8,8 +8,8 @@ import argparse
 from pytorch3d.ops import knn_points
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-d', '--datapath')
-parser.add_argument('-m', '--modelpath')
+parser.add_argument('-d', '--datapath', required=True)
+parser.add_argument('-m', '--modelpath', required=True)
 args = parser.parse_args()
 
 
@@ -42,18 +42,19 @@ def eval(dataset, model):
     model.eval()
     model.cuda()
     for batch in dataloader:
-        img, pcd_gt = batch['img'].cuda(), batch['pcd'].cuda()
+        img, pcd_gt = batch['img'].cuda(), batch['pts'].cuda()
         # TODO: add visualization
         pcd_pred = model(img)    
         e = eval_batch(pcd_pred, pcd_gt)
         err.append(e.detach().cpu())
     err = torch.cat(err).numpy()
-    print("max error: %f, mean error: %f, median error: %f" % (err.max(), err.mean(), np.median(err)))
+    print("max error: %f, mean error: %f, median error: %f unit: m" % (err.max(), err.mean(), np.median(err)))
 
 
 def main():
     dataset = BaymaxDataset(args.datapath)
     model = deepsoronet_vanilla()
+    model.load_state_dict(torch.load(args.modelpath))
     eval(dataset, model)
 
 
