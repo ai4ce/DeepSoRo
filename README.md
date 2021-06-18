@@ -46,15 +46,11 @@ Please check https://github.com/facebookresearch/pytorch3d/blob/master/INSTALL.m
 
 ### Train
 
-<?bash
 python train_baymax.py -d ${PATH_TO_DATASET}/BaymaxData/train -o ${PATH_TO_OUTPUTS}
-;?>
 
 ### Test
 
-<?bash
 python test_baymax.py -d ${PATH_TO_DATASET}/BaymaxData/test -m ${PATH_TO_OUTPUTS}/params/ep_${EPOCH_INDEX}.pth 
-:?>
 
 
 ## Citation
