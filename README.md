@@ -39,6 +39,24 @@ open3d>=0.10.0
 
 Please check https://github.com/facebookresearch/pytorch3d/blob/master/INSTALL.md for pytorch3d installation.
 
+
+## Insturctions
+1. Download the dataset: https://drive.google.com/file/d/1mrsSqivo2GCJ_frP_ehMg5cE5K0Yj48y/view?usp=sharing
+2. unzip the BaymaxData.zip.
+
+### Train
+
+<?bash
+python train_baymax.py -d ${PATH_TO_DATASET}/BaymaxData/train -o ${PATH_TO_OUTPUTS}
+;?>
+
+### Test
+
+<?bash
+python test_baymax.py -d ${PATH_TO_DATASET}/BaymaxData/test -m ${PATH_TO_OUTPUTS}/params/ep_${EPOCH_INDEX}.pth 
+:?>
+
+
 ## Citation
 If you find DeepSoRo useful in your research, please cite:
 ```BibTex
